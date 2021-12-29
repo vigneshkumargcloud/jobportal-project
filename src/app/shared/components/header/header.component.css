@@ -1,0 +1,25 @@
+/* header{
+    background-color:blue;
+    padding:20px;
+} */
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  mat-toolbar{
+      background-color: #0275d8;
+  }
+  .word{
+      color: black;
+      font-weight: bold;
+  }
+  span{
+      color:black;
+  }
+  img{
+      border-radius: 25px;
+  }
+  .headercolor{
+      background-color: #0275d8;
+  }
+ 
+ 

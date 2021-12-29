@@ -1,0 +1,36 @@
+<div class="container-fluid">
+    <mat-card class="cardtop">
+        <h1>Employeers</h1>
+        </mat-card>
+      <table class="table  table-hover">
+        <thead>
+            <tr>
+              <th scope="col">No</th>
+              <th scope="col">JobType</th>
+              <th scope="col">Companyname</th>
+              <th scope="col">Gender</th>
+              <th scope="col">Contact Number</th>
+              <th scope="col">Delete</th>
+              
+             
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let emp of emparray;let i=index">
+              <th scope="row">{{i}}</th>
+              <td>{{emp.companyname}}</td>
+              <td>{{emp.email}}</td>
+              <td>{{emp.gender}}</td>
+              <td>{{emp.contactNumber}}</td>
+              <!-- <td><button type="button" (click)="EditJobtype(job)" class="btn btn-info"><span class="material-icons">
+                edit
+                </span></button></td> -->
+                <td><button type="button" (click)="deleteJobtype(emp.id)" class="btn btn-danger"><span class="material-icons">
+                    delete
+                    </span></button></td>
+              
+            </tr>
+          
+          </tbody>
+      </table> 
+</div>

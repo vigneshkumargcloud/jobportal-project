@@ -1,0 +1,36 @@
+<mat-card class="cardtop">
+    <h1>Your Messages</h1>
+    </mat-card>
+  <table class="table  table-hover">
+    <thead>
+        <tr>
+          <th scope="col">No</th>
+          <th scope="col">message</th>
+          <th scope="col" *ngIf="userrole===3">CompanyName</th>
+          <th scope="col" *ngIf="userrole===2">UserName</th>
+          <th scope="col">Message Details</th>
+          <!-- <th scope="col">Delete</th> -->
+          
+         
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let mge of list;let i=index">
+          <th scope="row">{{i+1}}</th>
+          <td>{{mge.message}}</td>
+          <td *ngIf="userrole===3">{{mge.company_name}}</td>
+          <td *ngIf="userrole===2">{{mge.username}}</td>
+          <td><button type="button" (click)="messagedetail(mge)" class="btn btn-info"><span class="material-icons">
+            visibility
+            </span></button></td>
+          <!-- <td><button type="button" (click)="EditBusinesstype(bststream)" class="btn btn-info"><span class="material-icons">
+            edit
+            </span></button></td>
+            <td><button type="button" (click)="deleteJobtype(bststream.id)" class="btn btn-danger"><span class="material-icons">
+                delete
+                </span></button></td> -->
+          
+        </tr>
+      
+      </tbody>
+  </table> 

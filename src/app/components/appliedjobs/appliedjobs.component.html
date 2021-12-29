@@ -1,0 +1,158 @@
+<div *ngIf="usertype=='3'">
+  <mat-card class="cardtop" >
+    <div class="row">
+      <div class="col-md-6">
+        <h1>Jobs Applied By You</h1>
+      </div>
+      <div class="col-md-6">
+        <mat-form-field appearance="standard">
+            <div class="row">
+                <div class="col-md-4">
+                    <mat-label>Search Your jobs</mat-label>
+                </div>
+                <div class="col-md-6">
+                    <span class="material-icons">
+                        search
+                        </span>
+                </div>
+            </div>
+        
+          <input matInput (keyup)="FilterFunction($event)" placeholder="Ex. Mia" #input>
+        </mat-form-field>
+      </div>
+      </div>
+      
+      </mat-card>
+      
+      <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource" matSort>
+      
+          <!-- Position Column -->
+          <ng-container matColumnDef="jobtitle">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> JobTitle </th>
+            <td mat-cell *matCellDef="let element"> {{element.jobtitle}} </td>
+          </ng-container>
+      
+          <!-- Name Column -->
+          <ng-container matColumnDef="description" >
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Description </th>
+            <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+          </ng-container>
+      
+          <!-- Weight Column -->
+          <ng-container matColumnDef="maxsalary">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Maxsalary </th>
+            <td mat-cell *matCellDef="let element"> {{element.maxsalary}} </td>
+          </ng-container>
+      
+          <!-- Symbol Column -->
+        
+          
+          <ng-container matColumnDef="city">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> City </th>
+            <td mat-cell *matCellDef="let element"> {{element.city}} </td>
+          </ng-container>
+          <ng-container matColumnDef="js">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> job status </th>
+            <td mat-cell *matCellDef="let element"><button type="button" class="btns  btn-md">{{element.js}}</button>  </td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                       showFirstLastButtons 
+                       >
+        </mat-paginator>
+      </div>
+       
+</div>
+
+<!-- employee -->
+
+<div *ngIf="usertype=='2'">
+  <mat-card class="cardtop" >
+    <div class="row">
+      <div class="col-md-6">
+        <h1>Jobs Applied By You</h1>
+      </div>
+      <div class="col-md-6">
+        <mat-form-field appearance="standard">
+            <div class="row">
+                <div class="col-md-4">
+                    <mat-label>Search Your jobs</mat-label>
+                </div>
+                <div class="col-md-6">
+                    <span class="material-icons">
+                        search
+                        </span>
+                </div>
+            </div>
+        
+          <input matInput (keyup)="FilterFunction($event)" placeholder="Ex. Mia" #input>
+        </mat-form-field>
+      </div>
+      </div>
+      
+      </mat-card>
+      
+      <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource" matSort>
+      
+          <!-- Position Column -->
+          <ng-container matColumnDef="jobtitle">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> JobTitle </th>
+            <td mat-cell *matCellDef="let element"> {{element.jobtitle}} </td>
+          </ng-container>
+      
+          <!-- Name Column -->
+          <ng-container matColumnDef="description" >
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Description </th>
+            <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+          </ng-container>
+      
+          <!-- Weight Column -->
+          <ng-container matColumnDef="maxsalary">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Maxsalary </th>
+            <td mat-cell *matCellDef="let element"> {{element.maxsalary}} </td>
+          </ng-container>
+      
+          <!-- Symbol Column -->
+        
+          
+          <ng-container matColumnDef="city">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> City </th>
+            <td mat-cell *matCellDef="let element"> {{element.city}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="username">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Username </th>
+            <td mat-cell *matCellDef="let element"> {{element.username}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="js">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+            <td mat-cell *matCellDef="let element">  <button type="button" class="btns  btn-md">{{element.js}}</button>  </td>
+          </ng-container>
+          <ng-container matColumnDef="view">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> view </th>
+            <td mat-cell *matCellDef="let element">  <button (click)="redirect(element.user_acc_id,element.id)" type="button" class="btnne btn-md"><span class="material-icons">
+              visibility
+              </span></button>  </td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                       showFirstLastButtons 
+                       >
+        </mat-paginator>
+      </div>
+       
+</div>
+
+  
+
+
+  

@@ -1,0 +1,36 @@
+<div class="container">
+  <mat-card class="cardtop">
+    <h1>My Jobs</h1>
+    </mat-card>
+    <table class="table  table-hover">
+      <thead>
+          <tr>
+            <th scope="col">No</th>
+            <th scope="col">Jobtitle</th>
+            <th scope="col">Maxsalary</th>
+            <th scope="col">Location</th>
+            <th scope="col">Delete</th>
+            <th scope="col">View</th>
+            
+           
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let myjbs of myjobs;let i=index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{myjbs.jobtitle}}</td>
+            <td>{{myjbs.maxsalary}}</td>
+            <td>{{myjbs.city}}</td>
+            
+              <td><button type="button" (click)="deleteSavedjobs(myjbs.id)" class="btn btn-danger"><span class="material-icons">
+                  delete
+                  </span></button></td>
+                  <td><button type="button" (click)="jobdes(myjbs)" class="btn btn-info"><span class="material-icons">
+                    visibility
+                    </span></button></td>
+            
+          </tr>
+        
+        </tbody>
+    </table> 
+</div>

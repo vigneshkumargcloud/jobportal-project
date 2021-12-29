@@ -1,0 +1,56 @@
+<mat-toolbar>
+    
+      <mat-icon color="warn">work</mat-icon>
+    
+    <span  class="example-spacer word">CarieerMaker</span>
+    <div class="row">
+      
+      <div class="col" *ngIf="!userrole">
+        <span ><a class="word" href="signin">Login</a></span>
+      </div>
+    
+      
+      <div class="col" *ngIf="!userrole">
+        <span ><a class="word" href="signup">signup</a></span>
+      </div>
+      <div class="col"  *ngIf="userrole==='3'||userrole==='1'">
+        <div *ngIf="boolname===false else staticimg">
+          <img src="{{userprofile}}" height="50px" width="100%">
+        </div>
+        
+        
+        <ng-template #staticimg>
+          <img src="/assets/images/user.png" height="50px" width="100%">
+        </ng-template>
+      
+      </div>
+    
+      <!-- <div class="col">
+        <span >{{profilename}}</span>
+      </div> -->
+      <!-- <div class="col" *ngIf="userrole==='3'||userrole==='2'">
+        <span ><button type="button" class="btn" (click)="logout()"><span class="material-icons">
+          logout
+          </span></button></span>
+      </div> -->
+      <div class="col" *ngIf="userrole==='3'||userrole==='2'||userrole==='1'">
+        <div class="btn-group">
+          <button type="button" class="btn headercolor dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            {{profilename}}
+          </button>
+          <ul class="dropdown-menu">
+            <li><button type="button" class="btn" (click)="logout()">logout</button></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><button type="button" class="btn" (click)="profile()">Profile</button></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Change Password</a></li>
+           
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+ 
+  </mat-toolbar>

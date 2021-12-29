@@ -1,0 +1,253 @@
+<!-- <mat-card>
+    <form class="example-form">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Job Title</mat-label>
+          <input matInput placeholder="Ex. Pizza" value="Full Stack Developer">
+        </mat-form-field>
+      
+        <mat-form-field appearance="fill">
+          <mat-label>Job Type</mat-label>
+          <select matNativeControl>
+            <option value="" selected></option>
+            <option value="volvo">Full Time</option>
+            <option value="saab">Part Time</option>
+            <option value="mercedes">Internship</option>
+            <option value="audi">Temporary</option>
+          </select>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="example-form-field">
+          <mat-label>Choose a date</mat-label>
+          <input matInput [matDatepicker]="datepicker" color="primary">
+          <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+          <mat-datepicker #datepicker>
+            <mat-datepicker-actions>
+              <button mat-button matDatepickerCancel>Cancel</button>
+              <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+            </mat-datepicker-actions>
+          </mat-datepicker>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Job Description</mat-label>
+          <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+        </mat-form-field>
+        
+        
+      </form>
+</mat-card> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- NavBar END -->
+    
+    
+    <!-- Bootstrap row -->
+ 
+        <!-- Sidebar -->
+      
+        <!-- sidebar-container END -->
+    
+        <!-- MAIN -->
+        
+    
+            <!-- <h1>
+                Collapsing Menu
+                <small class="text-muted">Version 2.1</small>
+            </h1> -->
+    
+            <form (ngSubmit)="jobspost(jobsform)" #jobsform="ngForm">
+            <article>
+                <!-- job creation -->
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                          <div class="header bg-primary">
+                           <h5 class="texth">Post a new Job</h5>
+                          </div>
+                          <div class="card">
+                            <div class="card-body">
+                            
+                                 <div class="form-group">
+                                     <label for="exampleFormControlSelect1"  >Job Category</label>
+                                     
+
+                                    
+                                     
+                                    <select class="form-select" name="jobcategory_id" [(ngModel)]="jbpste.jobcategory_id" aria-label="Default select example">
+                                      <option *ngFor="let jbcte of getjobacte;" [value]="jbcte.id">{{jbcte.jobcate}}</option>
+                                    </select>
+                                   
+                                 </div>
+                                 <div class="form-group">
+                                    <label for="formGroupExampleInput">Job Title</label>
+                                    <input type="text" class="form-control" id="formGroupExampleInput" name="jobtitle" [(ngModel)]="jbpste.jobtitle">
+                                    
+                                 </div>
+                                 <div class="form-group">
+                                    <div class="row">
+                                        <div class="col">
+                                            <label for="formGroupExampleInput">Job Type</label>
+                                            <select class="form-select" name="jobtype_id" [(ngModel)]="jbpste.jobtype_id" aria-label="Default select example">
+                                              <option *ngFor="let jty of jobtypes;" [value]="jty.id">{{jty.jobtype}}</option>
+                                            </select>
+                                          
+                                        </div>
+                                        <div class="col">
+                                            <label for="formGroupExampleInput">Working Hours</label>
+                                          <input type="text" class="form-control" name="workinghours" [(ngModel)]="jbpste.workinghours" name="WorkingHours" required placeholder="8Hrs">
+                                          
+                                        </div>
+                                      </div>
+                                  
+                                 </div>
+                                 <div class="form-group">
+                                    <div class="row">
+                                        <div class="col">
+                                            <label for="formGroupExampleInput">min salary</label>
+                                            <input type="text" class="form-control" name="minsalary" [(ngModel)]="jbpste.minsalary"  required placeholder="50k">
+                                        </div>
+                                        <div class="col">
+                                            <label for="formGroupExampleInput">max salary </label>
+                                            <input type="text" class="form-control" name="maxsalary" [(ngModel)]="jbpste.maxsalary"  required placeholder="1L">
+                                        </div>
+                                      </div>
+                                  
+                                 </div>
+                                 <div class="form-group">
+                                  <div class="row">
+                                      <div class="col">
+                                         <!-- <label for="formGroupExampleInput">start Date</label>
+                                         <dp-date-picker dir="rtl" theme="dp-material"
+                                         name="sarting_date" [ngModel]="jbpste.sarting_date|date:'YYYY-MM-dd'">
+                                </dp-date-picker> -->
+                                <!-- <input type="date" name="sarting_date" [ngModel]="jbpste.sarting_date|date: 'YYYY-MM-dd'"> -->
+                                <mat-form-field appearance="fill">
+                                  <mat-label>Start Date</mat-label>
+                                  <input matInput name="picker"[(ngModel)]="jbpste.sarting_date"  [matDatepicker]="picker">
+                                  <mat-datepicker-toggle matSuffix  [for]="picker"></mat-datepicker-toggle>
+                                  <mat-datepicker #picker></mat-datepicker>
+                                </mat-form-field>
+                                <!-- <md-input-container class="block">
+                                  <input mdInput placeholder="Title" [ngModel]="jbpste.sarting_date|date: 'YYYY-MM-dd'">
+                              </md-input-container> -->
+                                      </div>
+                                      <div class="col">
+                                         <!-- <label for="formGroupExampleInput">Last Date</label>
+                                         <dp-date-picker dir="rtl" theme="dp-material" placeholder="۱۳۹۸/۱۰/۰۸" required="true"
+                                         name="end_date" [ngModel]="jbpste.end_date | date: 'YYYY-MM-dd'" minDate="07/11/2020">
+                                </dp-date-picker> -->
+                                <!-- <input type="date" placeholder="My Date" name="end_date" [ngModel]="jbpste.end_date | date: 'yyyy-MM-dd'"> -->
+                                <mat-form-field appearance="fill">
+                                  <mat-label>End Date</mat-label>
+                                  <input matInput name="picker1" [ngModel]="jbpste.end_date|date: 'YYYY-MM-dd'" [matDatepicker]="picker1">
+                                  <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                                  <mat-datepicker #picker1></mat-datepicker>
+                                </mat-form-field>
+                                      </div>
+                                      
+                                  </div>
+
+                              </div>
+                           
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- job creation -->
+                <!-- about job -->
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                          <div class="header bg-primary heamspac">
+                           <h5 class="texth">About This Job</h5>
+                          </div>
+                          <div class="card">
+                            <div class="card-body">
+                             <!-- <form> -->
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Description</label>
+                                    <textarea name="AboutJob" class="form-control" id="exampleFormControlTextarea1" name="description" [(ngModel)]="jbpste.description" rows="5"></textarea>
+                                  </div>
+                                
+                                
+                               
+                             <!-- </form> -->
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- about job -->
+
+                <!-- address -->
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                          <div class="header bg-primary heamspac">
+                           <h5 class="texth">Address/Location</h5>
+                          </div>
+                          <div class="card">
+                            <div class="card-body">
+                             <!-- <form> -->
+                                
+                                
+                               
+                                 
+                                
+                                 <div class="form-group">
+                                     <div class="row">
+                                         <div class="col">
+                                            <label for="formGroupExampleInput">state</label>
+                                            <input type="text" class="form-control" name="Latitude" name="state" [(ngModel)]="jbpste.state" placeholder="Tamil Nadu">
+                                         </div>
+                                         <div class="col">
+                                            <label for="formGroupExampleInput">city</label>
+                                            <input type="text" class="form-control" name="city" [(ngModel)]="jbpste.city" placeholder="Trichy">
+                                         </div>
+                                         <div class="col">
+                                            <label for="formGroupExampleInput">pin</label>
+                                            <input type="text" class="form-control"  name="pin"  [(ngModel)]="jbpste.pin" placeholder="600230">
+                                         </div>
+                                     </div>
+
+                                 </div>
+                               
+                             <!-- </form> -->
+                             
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row lma">
+                    <div class="col-lg-6">
+                        <h3>Looking For A Job</h3>
+                        <p>Your next level Product developemnt company assetsYour next level Product</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <button type="submit" class="btn btn-primary btn-lg btnside">Post This Job</button>
+                    </div>
+                </div>
+             
+                <!-- address -->
+            </article>
+          
+        </form>
+
+        <!-- Main Col END -->
+    
+
+

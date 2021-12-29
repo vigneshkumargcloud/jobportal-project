@@ -1,0 +1,38 @@
+mat-card{
+    background:#0275d8;
+    color:white;
+}
+.form-group{
+    margin-top: 10px;
+}
+.cardtop{
+     margin-top:25px;
+}
+table{
+    width:100%;
+    /* margin-top:25px; */
+    background-color: white;
+    color:black;
+   
+   
+}
+td {
+    color: black;
+}
+th{
+    color: black;
+}
+mat-form-field {
+    background-color: #0275d8;
+    width:100%;
+}
+input{
+    color:black;
+}
+mat-paginator{
+    background-color: #0275d8;
+}
+
+/* .imgbodre{
+    border-radius:100px;
+} */

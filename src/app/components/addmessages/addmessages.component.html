@@ -1,0 +1,89 @@
+<div class="container-fluid">
+    <mat-card class="mat">
+        <h1>Messages</h1>
+        </mat-card>
+        <div class="card">
+            <div class="card-body">
+                <form (ngSubmit)="msgadd(msgform)" #msgform="ngForm">
+                    
+                    
+                    <div class="form-group" *ngIf="utype===3">
+                        <label for="exampleInputPassword1">To</label>
+                        <select class="form-select" name="companyid" [(ngModel)]="mes.companyid" aria-label="Default select example"  (change)="onChange($event.target.value)">
+                            <option  *ngFor="let list of cmparray;"  [value]="list.id">{{list.company_name}}</option>
+                          </select>
+                      </div>
+                      <div class="form-group" *ngIf="utype===2">
+                        <label for="exampleInputPassword1">From</label>
+                        <input readonly type="text" class="form-control" id="exampleInputPassword1" name="username" [(ngModel)]="mes.username" placeholder="Customer Care">
+                      </div>
+                      <div class="form-group" *ngIf="!msgid">
+                        <label for="exampleInputPassword1">Your Message</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1" name="message" [(ngModel)]="mes.message" placeholder="Customer Care">
+                      </div>
+                      <!-- <div class="form-group" *ngIf="!msgid">
+                        <label for="exampleInputPassword1">uid</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1" name="uid" [(ngModel)]="mes.uid" placeholder="Customer Care">
+                      </div> -->
+                      <div class="form-group" *ngIf="msgid">
+                        <label for="exampleInputPassword1">Your Messages</label>
+                        <input readonly type="text" class="form-control" id="exampleInputPassword1" name="message" [(ngModel)]="mes.message" placeholder="Customer Care">
+                      </div>
+                      
+                    <div class="form-group"  *ngIf="!msgid">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <!-- <button type="button" (click)=" updateJobType(BusinessTypeForm)" class="btn btn-warning">Update</button> -->
+                </div>
+                  </form>
+                  <form (ngSubmit)="addemplyreply(emreply)" #emreply="ngForm">
+                    <div class="form-group" *ngIf="msgid && utype===2">
+                      <label for="exampleInputPassword1">Your Reply</label>
+                      <input  type="text" class="form-control" id="exampleInputPassword1" name="employeerreply" [(ngModel)]="reply.employeerreply" placeholder="Customer Care">
+                    </div>
+                    <div class="form-group" *ngIf="msgid && utype===3">
+                      <label for="exampleInputPassword1">Employeers Reply</label>
+                      <input readonly type="text" class="form-control" id="exampleInputPassword1" name="employeerreply" [(ngModel)]="reply.employeerreply" placeholder="Customer Care">
+                    </div>
+                    <div class="form-group" *ngIf="msgid && utype===3">
+                      <label for="exampleInputPassword1">Your Reply</label>
+                      <input  type="text" class="form-control" id="exampleInputPassword1" name="seekerreply" [(ngModel)]="reply.seekerreply" placeholder="Customer Care">
+                    </div>
+                    <div class="form-group"  *ngIf="msgid">
+                      <button type="submit" class="btn btn-warning">Reply</button>
+                      <!-- <button type="button" (click)=" updateJobType(BusinessTypeForm)" class="btn btn-warning">Update</button> -->
+                  </div>
+                  </form>
+            </div>
+          </div>
+<!-- 
+    <mat-card class="cardtop">
+        <h1>Job Type List</h1>
+        </mat-card> -->
+      <!-- <table class="table  table-hover">
+        <thead>
+            <tr>
+              <th scope="col">No</th>
+              <th scope="col">BusinessStream</th>
+              <th scope="col">Edit</th>
+              <th scope="col">Delete</th>
+              
+             
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let bststream of stream;let i=index">
+              <th scope="row">{{i+1}}</th>
+              <td>{{bststream.business_stream_name}}</td>
+              <td><button type="button" (click)="EditBusinesstype(bststream)" class="btn btn-info"><span class="material-icons">
+                edit
+                </span></button></td>
+                <td><button type="button" (click)="deleteJobtype(bststream.id)" class="btn btn-danger"><span class="material-icons">
+                    delete
+                    </span></button></td>
+              
+            </tr>
+          
+          </tbody>
+      </table>  -->
+</div>
+

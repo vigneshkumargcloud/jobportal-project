@@ -1,0 +1,23 @@
+mat-card{
+    background:hsl(208, 98%, 43%);
+    color:white;
+    margin-top: 25px;
+   
+}
+.form-group{
+    margin-top: 10px;
+}
+.cardtop{
+     margin-top:25px;
+}
+table{
+    width:100%;
+    /* margin-top:25px; */
+    background-color: white;
+   
+   
+}
+.card{
+    margin-bottom: 25px;
+}
+

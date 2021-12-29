@@ -1,0 +1,37 @@
+mat-card{
+    background:#0275d8;
+    color:white;
+}
+.form-group{
+    margin-top: 10px;
+}
+.cardtop{
+     margin-top:25px;
+}
+table{
+    width:100%;
+    /* margin-top:25px; */
+    background-color: white;
+   
+   
+}
+
+.mat-tab-label-active {
+    color: black;
+}
+mat-tab-group{
+    background-color:#0275d8;
+    color:black;
+}
+.btnmargin{
+    margin-top: 10px;
+}
+.btnmargine{
+    margin-top:14px;
+}
+.btnmarginf{
+    margin-top:10px;
+}
+.btnma{
+    margin-top:5px;
+}  

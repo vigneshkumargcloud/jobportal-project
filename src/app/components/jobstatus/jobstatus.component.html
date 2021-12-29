@@ -1,0 +1,55 @@
+<div class="container-fluid">
+<mat-card>
+    <h1>Job Status</h1>
+    </mat-card>
+    <div class="card">
+        <div class="card-body">
+            <form (ngSubmit)="jobstatus(jobstatusForm)" #jobstatusForm="ngForm">
+                
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Job Status</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" name="jobstatusname" [(ngModel)]="jobstat.jobstatusname" placeholder="Job Status">
+                </div>
+                <div class="form-group">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <!-- <button type="button" (click)=" updateJobType(BusinessTypeForm)" class="btn btn-warning">Update</button> -->
+            </div>
+              </form>
+        </div>
+      </div>
+
+      <mat-card class="cardtop">
+        <h1>Job Type List</h1>
+        </mat-card>
+      <table class="table  table-hover">
+        <thead>
+            <tr>
+              <th scope="col">No</th>
+              <th scope="col">BusinessStream</th>
+              <th scope="col">Edit</th>
+              <th scope="col">Delete</th>
+              
+             
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let jb of jbs;let i=index">
+              <th scope="row">{{i+1}}</th>
+              <td>{{jb.jobstatusname}}</td>
+              <td><button type="button" (click)="Editjobstatus(jb)" class="btn btn-info"><span class="material-icons">
+                edit
+                </span></button></td>
+                <td><button type="button" (click)="deletejobsstatus(jb.jobstatusid)" class="btn btn-danger"><span class="material-icons">
+                    delete
+                    </span></button></td>
+                    <!-- <td><input class="form-check-input" (click)="Editjobstatus(jb)" type="checkbox" value="" id="flexCheckDefault"> -->
+                      <!-- <label class="form-check-label" for="flexCheckDefault">
+                        Default checkbox
+                      </label></td> -->
+              
+            </tr>
+          
+          </tbody>
+      </table> 
+
+    </div>

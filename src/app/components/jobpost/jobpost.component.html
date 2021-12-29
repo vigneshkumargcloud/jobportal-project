@@ -1,0 +1,137 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            <img src="/assets/images/zoho-logo.png" class="img-fluid">
+            </div>
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col space">
+
+                    </div>
+                </div>
+              <h1>{{username}}</h1>
+              <p>Ready to jump back</p>
+            </div>
+    </div>
+    <div class="container cards">
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="card">
+              <div class="card-body bg-info">
+                <div class="row">
+                  <div class="col-md-6">
+                    
+                      <span class="material-icons">
+                        <p class="fon">sticky_note_2</p>
+                        </span>
+                  </div>
+                  <div class="col-md-6">
+                    <h2>Resume</h2>
+                    <p>My Resume</p>
+                  </div>
+                </div>
+                <button type="button" (click)="navigatetoResumePage()" class="btn btn-primary">Go To Resume</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card">
+              <div class="card-body bg-success">
+                <div class="row">
+                  <div class="col-md-6">
+                    <span class="material-icons">
+                      <p class="fon">perm_identity</p>
+                      </span>
+                  </div>
+                  <div class="col-md-6">
+                    <h1>Profile</h1>
+                    <p>Applications</p>
+                  </div>
+                </div>
+                <button type="button" (click)="navigateProfile()" class="btn btn-primary">Go To Profile</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card">
+              <div class="card-body bg-warning">
+                <div class="row">
+                  <div class="col-md-6">
+                    <span class="material-icons">
+                      <p class="fon">work</p>
+                      </span>
+                  </div>
+                  <div class="col-md-6">
+                    <h1>{{noofmsg}}</h1>
+                    <p>Messages</p>
+                  </div>
+                </div>
+             
+                <button type="button" (click)="navigatecompany()" class="btn btn-primary">Show More</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card">
+              <div class="card-body nowarning">
+                <div class="row">
+                  <div class="col-md-6">
+                    <span class="material-icons">
+                      <p class="fon">done_all</p>
+                      </span>
+                  </div>
+                  <div class="col-md-6">
+                    <h1>{{appliedlength}}</h1>
+                    <p>Jobs Applied</p>
+                  </div>
+                </div>
+             
+                <button type="button" (click)="navigatecompany()" class="btn btn-primary">Show More</button>
+              </div>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+      <mat-card class="cardtop">
+        <h1>Jobs Applied By {{username}}</h1>
+        </mat-card>
+      <table class="table  table-hover">
+        <thead>
+            <tr>
+              <th scope="col">No</th>
+              <th scope="col">Jobtitle</th>
+              <th scope="col">Description</th>
+              <th scope="col">Maxsalary</th>
+              <th scope="col">Location</th>
+              
+             
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let jbste of jobsapplied;let i=index">
+              <th scope="row">{{i+1}}</th>
+              <td>{{jbste.jobtitle}}</td>
+              <td>{{jbste.description}}</td>
+              <td>{{jbste.maxsalary}}</td>
+              <td>{{jbste.city}}</td>
+              <!-- <td><button type="button" (click)="EditBusinesstype(bststream)" class="btn btn-info"><span class="material-icons">
+                edit
+                </span></button></td> -->
+                <!-- <td><button type="button" (click)="deleteJobtype(bststream.id)" class="btn btn-danger"><span class="material-icons">
+                    delete
+                    </span></button></td> -->
+                    <!-- <td><input class="form-check-input" (click)="EditBusinesstype(bststream)" type="checkbox" value="" id="flexCheckDefault">
+                      <label class="form-check-label" for="flexCheckDefault">
+                        Default checkbox
+                      </label></td> -->
+              
+            </tr>
+          
+          </tbody>
+      </table> 
+</div>
+
+
+
+

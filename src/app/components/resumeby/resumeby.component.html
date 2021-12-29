@@ -1,0 +1,106 @@
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <mat-card class="cardtop">
+                    <h1>Education Details</h1>
+                    </mat-card>
+                    <table class="table  table-hover">
+                        <thead>
+                            <tr>
+                              <th scope="col">No</th>
+                              <th scope="col">instutename</th>
+                              <th scope="col">degreename</th>
+                              <th scope="col">percentage</th>
+                              
+                             
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr *ngFor="let bststream of edudetails;let i=index">
+                              <th scope="row">{{i+1}}</th>
+                              <td>{{bststream.instutename}}</td>
+                              <td>{{bststream.degreename}}</td>
+                              <td>{{bststream.percentage}}</td>
+                             
+                              
+                            </tr>
+                          
+                          </tbody>
+                      </table> 
+            </div>
+            <div class="row">
+                <mat-card class="cardtop">
+                    <h1>Experience Details</h1>
+                    </mat-card>
+                    <table class="table  table-hover">
+                        <thead>
+                            <tr>
+                              <th scope="col">No</th>
+                              <th scope="col">Companyname</th>
+                              <th scope="col">designation</th>
+                              <th scope="col">yearsworked</th>
+                              <th scope="col">salary</th>
+                              
+                             
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr *ngFor="let ex of exp;let i=index">
+                              <th scope="row">{{i+1}}</th>
+                              <td>{{ex.Companyname}}</td>
+                              <td>{{ex.designation}}</td>
+                              <td>{{ex.yearsworked}}</td>
+                                <td>{{ex.current_salary}}</td>
+                               
+                              
+                            </tr>
+                          
+                          </tbody>
+                      </table> 
+            </div>
+
+            <div class="row">
+                <mat-card class="cardtop">
+                    <h1>Skills Details</h1>
+                    </mat-card>
+                    <table class="table  table-hover">
+                        <thead>
+                            <tr>
+                              <th scope="col">No</th>
+                              <th scope="col">skillname</th>
+                             
+                              
+                             
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr *ngFor="let indi of individu;let i=index">
+                              <th scope="row">{{i+1}}</th>
+                              <td>{{indi.skillname}}</td>
+                              
+                               
+                              
+                            </tr>
+                          
+                          </tbody>
+                      </table> 
+            </div>
+            <div class="row" >
+                <div class="col-md-3" *ngIf="flag==true">
+                    <button class="btn-lg acept" (click)="grant()" [disabled]="flag==true">Accept</button>
+                </div>
+                <div class="col-md-3" *ngIf="flag==true">
+                    <button class="btn-lg no"  (click)="reject()" [disabled]="flag==false"><span class="material-icons">
+                        close
+                        </span></button>
+                </div>
+                <div class="col-md-3" *ngIf="flag==true">
+                  <button class="btn-lg no"  (click)="ScheduleInterview()" [disabled]="flag==false">
+                      Schedule Interview
+                      </button>
+              </div>
+            </div>
+            </div>
+        </div>
+    </div>

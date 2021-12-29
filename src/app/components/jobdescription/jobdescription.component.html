@@ -1,0 +1,242 @@
+<div>
+    <div class="container-fluid title">
+     <div class="row">
+
+         <div class="col-md-2">
+           
+            <img src="{{img}}" height="100px" width="100%">
+         </div>
+         <div class="col-md-8 floatimg">
+           <div>
+               <h1>{{jobtitle}}</h1>
+           </div>
+           <div class="row">
+               <div class="col-md-2">
+                <mat-icon aria-hidden="false" aria-label="Example home icon">work</mat-icon>
+               </div>
+               <div class="col-md-3">
+                   <p>Project Management</p>
+                
+            </div>
+            <div class="col-md-2">
+                <mat-icon aria-hidden="false" aria-label="Example home icon">place</mat-icon>
+               </div>
+               <div class="col-md-3">
+                <p>{{city}}</p>
+             
+         </div>
+         
+           </div>
+
+           <!--  -->
+
+           <div class="row">
+            <div class="col-md-2">
+             <mat-icon aria-hidden="false" aria-label="Example home icon">schedule</mat-icon>
+            </div>
+            <div class="col-md-3">
+                <p>May 12, 2000</p>
+             
+         </div>
+         <div class="col-md-2">
+             <mat-icon aria-hidden="false" aria-label="Example home icon">money</mat-icon>
+            </div>
+            <div class="col-md-3">
+             <p>{{minsalary}}k-{{maxsalary}}k</p>
+          
+      </div>
+      
+        </div>
+        <!--  -->
+   
+         </div>
+        
+     </div>
+     <div class="row">
+         <div class="col-md-6">
+           <p>Application ends: May 12, 2026</p>
+         </div>
+         <div class="col-md-6">
+            <div *ngIf="appliedforjobs===true else notappiled">
+                <p><button type="button" class="btn btcolor floatimg">Appiled</button></p>
+              </div>
+              
+              <ng-template #notappiled>
+                <p><button type="button" class="btn  btn-primary floatimg" (click)="appliedjobs()">Apply Now</button></p>
+              </ng-template>
+            
+           
+          </div>
+     </div>
+    </div>
+   
+        <mat-card class="card">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="row">
+                            <h1>Job Description</h1>
+                        </div>
+                        <div class="row">
+                            <p>{{description}}</p>
+                        </div>
+                        <div class="row">
+                            <h1>Key Responsibilities</h1>
+                        </div>
+                        <div class="row">
+                            <p><mat-icon aria-hidden="false" aria-label="Example home icon" class="lefticon">fiber_manual_record</mat-icon>Be involved in every step of the product design cycle from discovery to developer handoff and user acceptance testing.</p>
+                        </div>
+                        <div class="row">
+                            <p><mat-icon aria-hidden="false" aria-label="Example home icon" class="lefticon">fiber_manual_record</mat-icon>Be involved in every step of the product design cycle from discovery to developer handoff and user acceptance testing.</p>
+                        </div>
+                        <div class="row">
+                            <p><mat-icon aria-hidden="false" aria-label="Example home icon" class="lefticon">fiber_manual_record</mat-icon>Be involved in every step of the product design cycle from discovery to developer handoff and user acceptance testing.</p>
+                        </div>
+                        <div class="row">
+                            <p><mat-icon aria-hidden="false" aria-label="Example home icon" class="lefticon">fiber_manual_record</mat-icon>Be involved in every step of the product design cycle from discovery to developer handoff and user acceptance testing.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <mat-card class="overview">
+                            <div class="row">
+                                <p>Job Overview</p>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <mat-icon aria-hidden="false" aria-label="Example home icon" class="lefticon">calendar_today</mat-icon>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div><p>Date Posted</p></div> 
+                                       <div><p>May 3, 2000</p></div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <mat-icon aria-hidden="false" aria-label="Example home icon" class="lefticon">place</mat-icon>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div><p>Location</p></div> 
+                                       <div><p>{{city}}</p></div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <mat-icon aria-hidden="false" aria-label="Example home icon" class="lefticon">money</mat-icon>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div><p>Offered Salary</p></div> 
+                                       <div><p>{{minsalary}}k-{{maxsalary}}k</p></div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <mat-icon aria-hidden="false" aria-label="Example home icon" class="lefticon">hourglass_top</mat-icon>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div><p>Application Due</p></div> 
+                                       <div><p>May 3, 2000</p></div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <mat-icon aria-hidden="false" aria-label="Example home icon" class="lefticon">person</mat-icon>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div><p>Experience</p></div> 
+                                       <div><p>2 Year</p></div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <mat-icon aria-hidden="false" aria-label="Example home icon" class="lefticon">school</mat-icon>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div><p>Qualification</p></div> 
+                                       <div><p>B.E</p></div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </mat-card>
+                    </div>
+                </div>
+
+                <!-- skills -->
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="row">
+                            <h1>Skill & Experience</h1>
+                        </div>
+                        <div class="row">
+                            <p><mat-icon aria-hidden="false" aria-label="Example home icon" class="lefticon">fiber_manual_record</mat-icon>Be involved in every step of the product design cycle from discovery to developer handoff and user acceptance testing.</p>
+                        </div>
+                        <div class="row">
+                            <p><mat-icon aria-hidden="false" aria-label="Example home icon" class="lefticon">fiber_manual_record</mat-icon>Be involved in every step of the product design cycle from discovery to developer handoff and user acceptance testing.</p>
+                        </div>
+                        <div class="row">
+                            <p><mat-icon aria-hidden="false" aria-label="Example home icon" class="lefticon">fiber_manual_record</mat-icon>Be involved in every step of the product design cycle from discovery to developer handoff and user acceptance testing.</p>
+                        </div>
+                      
+                      
+                      
+                    </div>
+                    <div class="col-md-4">
+                        <mat-card class="overview">
+                            <div class="row">
+                                <p>Employer</p>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="{{img}}" height="100px" width="100%">
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div><p>{{companyname}}</p></div> 
+                                       <div><p><a href="">Company Profile</a></p></div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <mat-icon aria-hidden="false" aria-label="Example home icon" class="lefticon">date_range</mat-icon>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div><p>Founded Date</p></div> 
+                                       <div><p>May 3, 2000</p></div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <mat-icon aria-hidden="false" aria-label="Example home icon" class="lefticon">place</mat-icon>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div><p>Location:</p></div> 
+                                       <div><p>{{city}}</p></div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <mat-icon aria-hidden="false" aria-label="Example home icon" class="lefticon">phone</mat-icon>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div><p>Phone Number</p></div> 
+                                       <div><p>
+                                        123 444 555</p></div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <mat-icon aria-hidden="false" aria-label="Example home icon" class="lefticon">email</mat-icon>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div><p>Email:</p></div> 
+                                       <div><p>employer@apus.com</p></div> 
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </mat-card>
+                    </div>
+                </div>
+           
+        </div>
+        </mat-card>
+      
+  
+</div>
+

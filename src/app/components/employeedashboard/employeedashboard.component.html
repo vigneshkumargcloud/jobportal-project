@@ -1,0 +1,96 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            <img src="/assets/images/zoho-logo.png" class="img-fluid">
+            </div>
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col space">
+
+                    </div>
+                </div>
+              <h1>Zoho</h1>
+              <p>Ready to jump back</p>
+            </div>
+    </div>
+</div>
+<div class="container cards">
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="card">
+        <div class="card-body bg-info">
+          <div class="row">
+            <div class="col-md-6">
+              
+                <span class="material-icons">
+                  <p class="fon">sticky_note_2</p>
+                  </span>
+            </div>
+            <div class="col-md-6">
+              <h1>{{nojobs}}</h1>
+              <p>Jobs</p>
+            </div>
+          </div>
+          <button type="button" (click)="navigatejobs()" class="btn btn-primary">Show More</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="card">
+        <div class="card-body bg-success">
+          <div class="row">
+            <div class="col-md-6">
+              <span class="material-icons">
+                <p class="fon">perm_identity</p>
+                </span>
+            </div>
+            <div class="col-md-6">
+              <h1>{{applied}}</h1>
+              <p>Applications</p>
+            </div>
+          </div>
+          <button type="button" (click)="navigatejobseeker()" class="btn btn-primary">Show More</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="card">
+        <div class="card-body bg-warning">
+          <div class="row">
+            <div class="col-md-6">
+              <span class="material-icons">
+                <p class="fon">work</p>
+                </span>
+            </div>
+            <div class="col-md-6">
+              <h1>{{noofmsg}}</h1>
+              <p>Messages</p>
+            </div>
+          </div>
+       
+          <button type="button" (click)="navigatecompany()" class="btn btn-primary">Show More</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="card">
+        <div class="card-body bg-danger">
+          <div class="row">
+            <div class="col-md-6">
+              <span class="material-icons">
+                <p class="fon">assignment</p> 
+                </span>
+            </div>
+            <div class="col-md-6">
+              <h1></h1>
+              <p>post a job</p>
+            </div>
+          </div>
+          <button type="button" (click)="navigateappliedjobs()" class="btn btn-primary">post a job</button>
+     
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

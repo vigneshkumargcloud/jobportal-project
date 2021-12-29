@@ -1,0 +1,56 @@
+<div class="container-fluid">
+    <mat-card>
+        <h1>Job Category</h1>
+        </mat-card>
+        <div class="card">
+            <div class="card-body">
+                <form (ngSubmit)="BusinessTypePosted(BusinessTypeForm)" #BusinessTypeForm="ngForm">
+                    
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Business Stream Name</label>
+                      <input type="text" class="form-control" id="exampleInputPassword1" name="business_stream_name" [(ngModel)]="bst.business_stream_name" placeholder="Customer Care">
+                    </div>
+                    <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="button" (click)=" updateJobType(BusinessTypeForm)" class="btn btn-warning">Update</button>
+                </div>
+                  </form>
+            </div>
+          </div>
+
+    <mat-card class="cardtop">
+        <h1>Job Type List</h1>
+        </mat-card>
+      <table class="table  table-hover">
+        <thead>
+            <tr>
+              <th scope="col">No</th>
+              <th scope="col">BusinessStream</th>
+              <th scope="col">Edit</th>
+              <th scope="col">Delete</th>
+              
+             
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let bststream of stream;let i=index">
+              <th scope="row">{{i+1}}</th>
+              <td>{{bststream.business_stream_name}}</td>
+              <td><button type="button" (click)="EditBusinesstype(bststream)" class="btn btn-info"><span class="material-icons">
+                edit
+                </span></button></td>
+                <td><button type="button" (click)="deleteJobtype(bststream.id)" class="btn btn-danger"><span class="material-icons">
+                    delete
+                    </span></button></td>
+                    <!-- <td><input class="form-check-input" (click)="EditBusinesstype(bststream)" type="checkbox" value="" id="flexCheckDefault">
+                      <label class="form-check-label" for="flexCheckDefault">
+                        Default checkbox
+                      </label></td> -->
+              
+            </tr>
+          
+          </tbody>
+      </table> 
+</div>
+
+

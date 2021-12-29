@@ -1,0 +1,76 @@
+/* mat-grid-tile {
+    background: lightblue;
+  } */
+  .space{
+    height:50px;
+}
+.first{
+    background-color: balck;
+    color:orange;
+    height:100px;
+    width: 100%;
+    font-size: larger;
+}
+.material-icons{
+  font-size:40px;
+}
+.second{
+  background-color: balck;
+  color:red;
+  height:100px;
+  width: 100%;
+  font-size: larger;
+}
+.third{
+  background-color: balck;
+  color:blue;
+  height:100px;
+  width: 100%;
+  font-size: larger;
+}
+mat-card-actions button{
+    background-color: orange;
+    border: orange;
+    margin-left: 10px;
+}
+mat-grid-tile{
+    margin-left: 10px;
+}
+table {
+  width: 100%;
+}
+
+
+.cards{
+margin-bottom:50px;
+}
+
+
+
+
+
+.fon{
+  font-size:70px;
+}
+
+mat-card{
+    background:#0275d8;
+    color:white;
+}
+.form-group{
+    margin-top: 10px;
+}
+.cardtop{
+     margin-top:25px;
+}
+table{
+    width:100%;
+    /* margin-top:25px; */
+    background-color: white;
+   
+   
+}
+.nowarning{
+    background-color:#fc0313;
+}
+

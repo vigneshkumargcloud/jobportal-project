@@ -1,0 +1,29 @@
+mat-card{
+    background-color: white;
+    margin-top:50px;
+    color: black;
+}
+.input-group-addon{
+    background-color: #ecf0f1;
+    border:thick ridge #ecf0f1;
+    
+}
+.form-group{
+    margin-top: 21px;
+}
+.iconbtns{
+    margin-top: 21px;
+}
+.mat-tab-label-active {
+    color: black;
+}
+mat-tab-group{
+    background-color:black;
+    color:black;
+}
+.form-group{
+    background-color:white;
+}
+.login{
+    background-color: white;
+}

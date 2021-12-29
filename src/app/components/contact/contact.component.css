@@ -1,0 +1,22 @@
+.imgcon{
+    width: 100%;
+    height: 300px;
+}
+mat-card{
+    width:100%;
+    background-color: white;
+    color: black;
+}
+.row{
+margin-top: 25px;
+}
+mat-icon {
+    color: blue;
+    font-size:100px;
+    font-weight: bolder;
+  
+}
+.card{
+    background-color:#f5f7fc;
+}
+

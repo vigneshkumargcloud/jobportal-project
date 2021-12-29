@@ -1,0 +1,35 @@
+.row{
+    margin-top:10px;
+}
+mat-card{
+    background-color: white;
+    color: black;
+    /* margin-top: 10px; */
+}
+.text{
+    margin-top:10px ;
+}
+mat-icon{
+    float: right;
+}
+.actions  button{
+    float: right;
+}
+.card{
+    background-color:#0d6efd;
+    margin-bottom: 0px;
+    color:white;
+}
+.each{
+    margin-top: 25px;
+    
+}
+.right{
+    float: right;
+}
+.mat-paginator{
+    background-color:#0275d8;
+}
+.cardtop{
+    margin-top:25px;
+}

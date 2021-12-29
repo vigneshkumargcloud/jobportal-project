@@ -1,0 +1,103 @@
+<div id="content" #content>
+
+
+<div class="container-fluid">
+    <div class="card">
+    <div class="card-body">
+
+    
+  
+    <div class="row">
+        <div class="col-md-3">
+            <div *ngIf="useraccount else staticimg">
+                <img src="{{userprofile}}" height="200px" width="200px">
+              </div>
+              
+              <ng-template #staticimg>
+                <img src="/assets/images/user.png" height="200px" width="200px">
+              </ng-template>
+              <!-- <img src="/assets/images/user.png" height="200px" width="200px"> -->
+            
+        </div>
+        <div class="col-md-3">
+            <div>
+                <p class="fonsts">Name:{{userprofilename}}</p>
+            </div>
+            <div>
+                <p  class="fonsts">Salary:{{currentsalary}}k</p>
+            </div>
+            <div>
+                <p  class="fonsts">designation:programmer</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            
+           
+        </div>
+    </div>
+    <div class="row">
+        <mat-card class="cardtop">
+            <h1>Education Details</h1>
+            </mat-card>
+            <table class="table  table-hover">
+                <thead>
+                    <tr>
+                      <th scope="col">No</th>
+                      <th scope="col">instutename</th>
+                      <th scope="col">degreename</th>
+                      <th scope="col">percentage</th>
+                      
+                     
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let bststream of edudetails;let i=index">
+                      <th scope="row">{{i+1}}</th>
+                      <td>{{bststream.instutename}}</td>
+                      <td>{{bststream.degreename}}</td>
+                      <td>{{bststream.percentage}}</td>
+                     
+                      
+                    </tr>
+                  
+                  </tbody>
+              </table> 
+    </div>
+    <div class="row">
+        <mat-card class="cardtop">
+            <h1>Experience Details</h1>
+            </mat-card>
+            <table class="table  table-hover">
+                <thead>
+                    <tr>
+                      <th scope="col">No</th>
+                      <th scope="col">Companyname</th>
+                      <th scope="col">designation</th>
+                      <th scope="col">yearsworked</th>
+                      <th scope="col">salary</th>
+                      
+                     
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let ex of exp;let i=index">
+                      <th scope="row">{{i+1}}</th>
+                      <td>{{ex.Companyname}}</td>
+                      <td>{{ex.designation}}</td>
+                      <td>{{ex.yearsworked}}</td>
+                        <td>{{ex.current_salary}}</td>
+                        <td><button type="button" (click)="Editresume(ex)" class="btn btn-info"><span class="material-icons">
+                          edit
+                          </span></button></td>
+                      
+                    </tr>
+                  
+                  </tbody>
+              </table> 
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+<button class="btn btn-danger" type="button" (click)="downloadPdf()">Download AS PDF</button>

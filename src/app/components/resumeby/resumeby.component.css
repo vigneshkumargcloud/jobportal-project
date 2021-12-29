@@ -1,0 +1,37 @@
+.fonsts{
+    font-weight:bolder;
+    font-size: larger;
+}
+
+mat-card{
+    background:#0275d8;
+    color:white;
+}
+.form-group{
+    margin-top: 10px;
+}
+.cardtop{
+     margin-top:25px;
+}
+table{
+    width:100%;
+    /* margin-top:25px; */
+    background-color: white;
+   
+   
+}
+
+.btn{
+    margin-top: 15px;
+}
+
+.acept{
+    background-color: #1f4e99;
+    border:#1f4e99;
+    color: white;
+}
+.no{
+    background-color: #ba1826;
+    border:#ba1826;
+    color: white;
+}

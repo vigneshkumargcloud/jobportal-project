@@ -1,0 +1,19 @@
+mat-card{
+    background:#0275d8;
+    color:white;
+}
+
+
+.cardform{
+background-color: white;
+}
+form{
+    color: black;
+}
+.form-group{
+    margin-top: 25px;
+}
+.imgstyle{
+    width: 250px;
+    height: 200px;
+}

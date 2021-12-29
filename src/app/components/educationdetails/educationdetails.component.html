@@ -1,0 +1,178 @@
+
+
+<!-- <mat-card>
+    <h1>Education details</h1>
+    </mat-card> -->
+    
+ <mat-tab-group mat-align-tabs="center">
+  <mat-tab  label="Education">  
+    <div class="card">
+        <div class="card-body">
+            <form (ngSubmit)="addEdu(EducationForm)" #EducationForm="ngForm">
+                
+                <div class="row" style="margin-top: 50px;" *ngFor="let ins of detailsarray;let q=index">
+                    <div class="col-md-3">
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">instutename</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1" name="instutename{{q}}" [(ngModel)]="ins.instutename" placeholder="instutename">
+                     </div>
+                     </div>
+                     <div class="col-md-3">
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">degreename</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1" name="degreename{{q}}" [(ngModel)]="ins.degreename" placeholder="degreename">
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">percentage</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1" name="percentage{{q}}" [(ngModel)]="ins.percentage" placeholder="percentage">
+                   
+                    </div>
+                    </div>
+                   <div class="row">
+
+                  
+                    <div class="col-md-1 btnmargin">
+                      <div class="form-group" *ngIf="proid">
+                      <button type="button" (click)="addedit()" class="btn btn-primary btnma"><span class="material-icons">
+                        <span class="material-icons">
+                          add_circle
+                          </span>
+                        </span></button>
+                    </div>
+                    <div class="form-group btnmargin" *ngIf="!proid">
+                      <button type="button" (click)="addfrm()" class="btn btn-primary btnma"><span class="material-icons">
+                        <span class="material-icons">
+                          add_circle
+                          </span>
+                        </span></button>
+                    </div>
+                    
+                    </div>
+                    <div class="col-md-1 btnmargine" *ngIf="q>=1 &&!proid">
+                      <button type="button" (click)="rem(q)" class="btn btn-warning btnmargin"><span class="material-icons">
+                        remove_circle
+                        </span></button>
+                    </div>
+                    <div class="col-md-1 btnmargine" *ngIf="q>=edlength && proid">
+                      <button type="button" (click)="edufordelete(q)" class="btn btn-warning btnmarginf"><span class="material-icons">
+                        remove_circle
+                        </span></button>
+                    </div>
+                    <div class="col-md-1 btnmargine" *ngIf="proid">
+                      <button type="button" (click)="delete(ins.id)" class="btn btn-danger btnmargin"><span class="material-icons">
+                        delete_outline
+                        </span></button>
+                    </div>
+                    <div class="col-md-1 btnmargine" *ngIf="q>=edlength && proid">
+                      <button type="button" (click)="addedudetails(ins)" class="btn btn-info btnmarginf"><span class="material-icons">
+                        insert_link
+                        </span></button>
+                    </div>
+                  </div>
+                  
+                  </div>
+                  <div class="btnmargin">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                   </div>
+              </form>
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab  label="Experience">  
+      <div class="card">
+          <div class="card-body">
+              <form (ngSubmit)="expe(ExperienceForm)" #ExperienceForm="ngForm">
+                  
+                  <div class="row" style="margin-top: 50px;" *ngFor="let ins of experlist;let q=index">
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Companyname</label>
+                          <input type="text" class="form-control" id="exampleInputPassword1" name="Companyname{{q}}" [(ngModel)]="ins.Companyname" placeholder="Companyname">
+                       </div>
+                       </div>
+                       <div class="col-md-3">
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">designation</label>
+                          <input type="text" class="form-control" id="exampleInputPassword1" name="designation{{q}}" [(ngModel)]="ins.designation" placeholder="designation">
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">yearsworked</label>
+                          <input type="text" class="form-control" id="exampleInputPassword1" name="yearsworked{{q}}" [(ngModel)]="ins.yearsworked" placeholder="yearsworked">
+                     
+                      </div>
+                    </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                        <label for="exampleInputPassword1">current_salary</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1" name="current_salary{{q}}" [(ngModel)]="ins.current_salary" placeholder="current_salary">
+                   
+                    </div>
+                    </div>
+                     
+                      <div class="col-md-1 btnmargin" *ngIf="!proid">
+                        <button type="button" (click)="addexpe()" class="btn btn-primary">+</button>
+                      </div>
+                      <div class="col-md-1 btnmargin" *ngIf="q>=1 && !proid ">
+                        <button type="button" (click)="removeexper(q)" class="btn btn-danger">-</button>
+                      </div>
+                      <div class="col-md-1 btnmargin" *ngIf="proid">
+                        <button type="button" (click)="deletework(ins.id)" class="btn btn-danger"><span class="material-icons">
+                          delete_outline
+                          </span></button>
+                      </div>
+                    
+                    </div>
+                    <div class="btnmargin">
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                     </div>
+                </form>
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab  label="skills">  
+        <div class="card">
+            <div class="card-body">
+                <form (ngSubmit)="skills(skillsform)" #skillsform="ngForm">
+                    
+                    <div class="row" style="margin-top: 50px;" *ngFor="let ins of skillset;let q=index">
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="exampleInputPassword1">skillname</label>
+                            <input type="text" class="form-control" id="exampleInputPassword1" name="skillname{{q}}" [(ngModel)]="ins.skillname" placeholder="skillname">
+                         </div>
+                         </div>
+                         
+                       
+                      
+                       <div class="row">
+                        <div class="col-md-1 btnmargin" *ngIf="!proid">
+                          <button type="button" (click)="addskills()" class="btn btn-primary">+</button>
+                        </div>
+                        <div class="col-md-1 btnmargin" *ngIf="q>=1 && !proid">
+                          <button type="button" (click)="removeSkills(q)" class="btn btn-warning">-</button>
+                        </div>
+                        <div class="col-md-1 btnmargin" *ngIf="proid">
+                          <button type="button" (click)="deleteskills(ins.id)" class="btn btn-danger"><span class="material-icons">
+                            delete_outline
+                            </span></button>
+                        </div>
+                       </div>
+                        
+                      
+                      </div>
+                      <div class="btnmargin">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                       </div>
+                  </form>
+            </div>
+          </div>
+        </mat-tab>
+
+      
+ </mat-tab-group>
+

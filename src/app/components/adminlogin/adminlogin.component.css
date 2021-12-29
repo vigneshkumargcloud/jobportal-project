@@ -1,0 +1,50 @@
+mat-card{
+    margin-top:10px;
+    background-color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+mat-form-field {
+    background-color: white;
+    width: 100%;
+    color: black;
+}
+mat-card{
+    color: black;
+}
+button{
+  border-radius: 30px;
+}
+.container{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.cardti{
+    font-weight: bolder;
+}
+.input-group-addon{
+    background-color: #ecf0f1;
+    
+}
+.form-group{
+    margin-top: 21px;
+    background-color:white;
+}
+.iconbtns{
+    margin-top: 21px;
+}
+.mat-tab-label-active {
+    color: black;
+}
+mat-tab-group{
+    background-color:black;
+    color:black;
+}
+.login{
+    background-color: white;
+}
+.wi{
+    margin-top: 10px;
+}

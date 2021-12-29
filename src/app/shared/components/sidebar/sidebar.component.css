@@ -1,0 +1,27 @@
+/* :host{
+    padding: 20px;
+    background-color: forestgreen;
+} */
+mat-sidenav-container{
+    height: 100%;
+    background-color: white;
+   
+}
+mat-sidenav {
+        
+}
+mat-nav-list{
+
+}
+mat-sidenav mat-nav-list mat-list-item .chevron-button{
+transition: 300ms ease-in-out;
+transform: rotate(0deg);
+float:right ;
+position: absolute;
+}
+.chevron-button.rotated{
+    transform: rotate(180deg);
+}
+mat-sidenav-container{
+background-color: #eeee;
+}

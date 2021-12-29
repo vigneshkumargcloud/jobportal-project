@@ -1,0 +1,16 @@
+.contain{
+    height:50px;
+    background-color: #1967d2;
+   
+}
+.contain h1{
+    font-weight:bolder;
+    text-align: center;
+    padding-top: 10px;
+}
+.row{
+    margin-top: 21px;
+}
+button{
+    float: right;
+}

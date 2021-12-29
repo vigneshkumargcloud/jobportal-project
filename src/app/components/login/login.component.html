@@ -1,0 +1,182 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-body">
+         
+         <div class="row">
+           <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <mat-tab-group mat-align-tabs="center">
+                  <mat-tab  label="Employer">  
+                   
+                    <form  (ngSubmit)="EmployeerLogin(emploginform)" #emploginform="ngForm" class="login">
+                      <h1 class="card-title cardti">Welcome Back:)</h1>
+                      <p class="card-text">to keep connected with us please login with your personal information by email address and password.</p>
+                    <div class="form-group">
+                      <label class="control-label" for="email">
+                        CompanyName
+                      </label>
+                      <div class="input-group">
+                        <div class="input-group-addon">
+                          <span class="material-icons">
+                            business
+                            </span>
+                        </div>
+                        <input class="form-control" id="email" name="email" [(ngModel)]="empe.companyname" type="email"/>
+                      </div>
+                    </div>
+  
+                    <div class="form-group">
+                      <label class="control-label" for="email">
+                        Password
+                      </label>
+                      <div class="input-group">
+                        <div class="input-group-addon">
+                          <span class="material-icons">
+                            lock
+                            </span>
+                        </div>
+                        <input class="form-control" id="email" name="password" [(ngModel)]="empe.password" type="password"/>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <button type="submit" class="btn btn-primary">Existing User? Login</button>
+                        </div>
+                        <div class="col-md-6">
+                          <button type="button" class="btn btn-danger">Create a new Account</button>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6 wi">
+                          <button type="button" class="btn btn-warning" (click)="Email()">Forgot Password ?</button>
+                        </div>
+                       
+
+                      </div>
+                    </div>
+                    <div class="row iconbtns">
+                      <div class="col">
+                        <button type="button" class="btn btn-primary"> <mat-icon>facebook</mat-icon></button>
+                      </div>
+                        <div class="col">
+                          <button type="button" class="btn btn-danger"><mat-icon>whatsapp</mat-icon></button>
+                        </div>
+                        <div class="col">
+                          <button type="button" class="btn btn-success"><mat-icon>facebook</mat-icon></button>
+                        </div>
+                     
+                      
+                    </div>
+                    
+                   
+                   
+                 
+                 
+                      
+                  
+                   
+                 
+                 
+               
+                   
+                  </form>
+                </mat-tab>
+                  <mat-tab  label="JobSeeker">
+                    
+                    <a href="#" class="btn btn-primary" hidden>Go somewhere</a>
+                    <form (ngSubmit)="jobseekerlogin(loginform)" #loginform="ngForm" class="login">
+                      <h1 class="card-title cardti">Welcome Back:)</h1>
+                    <p class="card-text">to keep connected with us please login with your personal information by email address and password.</p>
+                      <div class="form-group">
+                        <label class="control-label" for="email">
+                          username
+                        </label>
+                        <div class="input-group">
+                          <div class="input-group-addon">
+                            <span class="material-icons">
+                              person
+                              </span>
+                          </div>
+                          <input class="form-control" id="email" name="email" [(ngModel)]="log.username" type="email"/>
+                        </div>
+                      </div>
+    
+                      <div class="form-group">
+                        <label class="control-label" for="email">
+                          Password
+                        </label>
+                        <div class="input-group">
+                          <div class="input-group-addon">
+                            <span class="material-icons">
+                              lock
+                              </span>
+                          </div>
+                          <input class="form-control" id="email" name="password" [(ngModel)]="log.password" type="password"/>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <button type="submit" class="btn btn-primary">Existing User? Login</button>
+                          </div>
+                          <div class="col-md-6">
+                            <button type="button" class="btn btn-danger">Create a new Account</button>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6 wi">
+                            <button type="button" class="btn btn-warning" (click)="Email()">Forgot Password ?</button>
+                          </div>
+                         
+                        </div>
+                      </div>
+                      <div class="row iconbtns">
+                        <div class="col">
+                          <button type="button" class="btn btn-primary"> <mat-icon>facebook</mat-icon></button>
+                        </div>
+                          <div class="col">
+                            <button type="button" class="btn btn-danger"><mat-icon>whatsapp</mat-icon></button>
+                          </div>
+                          <div class="col">
+                            <button type="button" class="btn btn-success"><mat-icon>facebook</mat-icon></button>
+                          </div>
+                       
+                        
+                      </div>
+                      
+                     
+                     
+                   
+                   
+                        
+                    
+                     
+                   
+                   
+                 
+                     
+                    </form>
+                  </mat-tab>
+                </mat-tab-group>
+                
+                <a href="#" class="btn btn-primary" hidden>Go somewhere</a>
+                
+              </div>
+            </div>
+           </div>
+           <div class="col-md-6">
+            <img src="/assets/images/employee-clipart-introduction-buddy-in-the-workplace.png" height="550px" width="100%">
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+   
+  </div>
+</div>
+
+

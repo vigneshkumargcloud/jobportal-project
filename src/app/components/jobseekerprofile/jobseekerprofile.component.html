@@ -1,0 +1,399 @@
+<!-- <article>
+    <!-- job creation -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-9">
+              <div class="header bg-primary">
+               <h5 class="texth">Personal Info</h5>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                 <form [formGroup]="profileform" enctype="multipart/form-data" (ngSubmit)="onupload()">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6 imgform">
+                              <!-- <img src="{{picArray[0].imagepos}}" class="img-fluid"> -->
+                            </div>
+                            <div class="col-md-6">
+                                <p>JPEG Or PNG 500x500px Thumbnail</p>
+                                <div class="form-group">
+                                    <input type="file" name="profileimg" #fileInput>
+                                    <!-- <button>profile</button> -->
+                                    </div>
+                                <!-- <button type="file" class="btn btn-primary mb-2">Confirm identity</button> -->
+                                <!-- <label class="btn btn-default btn-primary "> -->
+                                    <!-- Browse Image <input type="file" hidden> -->
+                                    
+                                        
+                                <!-- </label> -->
+                            </div>
+                          </div>
+                      
+                     </div>
+                     <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="formGroupExampleInput">@UserName</label>
+                                <input type="text" class="form-control" name="username" formControlName="username" placeholder="UserName">
+                            </div>
+                          
+                            <div class="col-md-6">
+                                <label for="formGroupExampleInput">first_name</label>
+                                <input type="email" name="first_name" formControlName="first_name" class="form-control" placeholder="first_name">
+                            </div>
+                          </div>
+                      
+                     </div>  
+                      <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="formGroupExampleInput">last_name</label>
+                                <input type="text" name="last_name"  formControlName="last_name" class="form-control" placeholder="last_name">
+                            </div>
+                          
+                            <div class="col-md-6">
+                                <label for="formGroupExampleInput">current_salary</label>
+                                <input type="text" class="form-control" formControlName="current_salary" placeholder="current_salary">
+                            </div>
+                          </div>
+                      
+                     </div>
+                     
+
+                     
+                    
+                     <div class="form-group">
+                        <div class="row">
+                            <div class="col">
+                                <label for="formGroupExampleInput">email</label>
+                              <input type="text" class="form-control" formControlName="email" placeholder="email">
+                            </div>
+                            <div class="col">
+                                <label for="formGroupExampleInput">address</label>
+                              <input type="text" class="form-control" formControlName="address" placeholder="address">
+                            </div>
+                          </div>
+                      
+                     </div>
+                     <div class="row lma">
+                        <div class="col-lg-6">
+                            <h3>Looking For A Job</h3>
+                            <p>Your next level Product developemnt company assetsYour next level Product</p>
+                        </div>
+                        <div class="col-lg-6 right">
+                            <button type="submit" class="btn btn-primary btn-lg btnside">Submit</button>
+                        </div>
+                        <!-- <div class="col-lg-6">
+                            <button type="button"  (click)="edit()"class="btn btn-primary btn-lg btnside">Edit</button>
+                        </div> -->
+                    </div>
+                   
+                 </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 margin" style="
+            margin-top: 25px;">
+                <div class="imgcol">
+                    <!-- <img  src="{{picArray[0].imagepos}}"> -->
+                </div>
+                <!-- <div class="container-fluid width"> -->
+                    <div class="card">
+                        <div class="card-body">
+                           <div class="row">
+                               <div class="col-md-2">
+                               
+                                  
+                               </div>
+                               <div class="col-md-10">
+                               <p>{{username}}</p>
+                               <p class="usestyle">@Username</p>
+                                  
+                            </div>
+                            <div class="col-md-2">
+                               
+                                  
+                            </div>
+                           </div> 
+                           <div class="row">
+                               <div class="col-md-6">
+                                   <p>Profile</p>
+                               </div>
+                               <div class="col-md-2">
+
+                               </div>
+                               <div class="col-md-4">
+                                <p>70%</p>
+                            </div>
+                           </div>
+                           <div class="row">
+                            <div class="col-md-12">
+                                
+                                
+                                <!-- <div class="progress" style="height: 10px;">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                  </div> -->
+                                  <div class="progress" style="height: 10px;">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                  </div>
+                               
+                            </div>
+                           
+                        
+                        </div> 
+                       
+                        <div class="row topgap">
+                            <div class="col-md-2">
+                                <i class="fa fa-newspaper-o" style="font-size:25px;" aria-hidden="true"></i>
+                            </div>
+                           
+                            <div class="col-md-10">
+                                <button type="button" class="btn btn-primary" (click)="edu()">Education Details</button>
+                         </div>
+                        </div>
+                        <div class="row topgap">
+                            <div class="col-md-2">
+                                <i class="fa fa-newspaper-o" style="font-size:25px;" aria-hidden="true"></i>
+                            </div>
+                           
+                            <div class="col-md-10">
+                                <button type="button" class="btn btn-primary" (click)="resume()">Resume</button>
+                         </div>
+                        </div>
+                      
+                        <div class="row topgap">
+                            <div class="col-md-2">
+                                
+                               
+                                <i class="fa fa-map" style="font-size:25px;" aria-hidden="true"></i>
+                            </div>
+                           
+                            <div class="col-md-6">
+                             <p class="blackfont"><a href="#">Messages</a></p>
+                         </div>
+                        </div>
+                    </div>
+                <!-- </div> -->
+                
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- job creation -->
+    <!-- about job -->
+    <!-- <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-9">
+              <div class="header bg-primary heamspac">
+               <h5 class="texth">Education Details</h5>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                 <form>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col">
+                                <label for="formGroupExampleInput">Graduation</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>Under Graduation</option>
+                                    <option>Post Graduation</option>
+                                    <option>PHD</option>
+                                  
+
+                                 </select>
+                            </div>
+                            <div class="col">
+                                <label for="formGroupExampleInput">Course</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    
+                                    <option>B.E</option>
+                                    <option>BTech</option>
+                                   
+
+                                 </select>
+                            </div>
+                          </div>
+                      
+                     </div>
+                     <div class="form-group">
+                        <div class="row">
+                            <div class="col">
+                                <label for="formGroupExampleInput">Passed Out Year</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>2001</option>
+                                    <option>2002</option>
+                                    <option>2003</option>
+                                  
+
+                                 </select>
+                            </div>
+                            <div class="col">
+                                <label for="formGroupExampleInput">Percentage</label>
+                                <input type="text" class="form-control" placeholder="100%">
+                                
+                            </div>
+                          </div>
+                      
+                     </div>
+                     <div class="form-group">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1">Full Time</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Partime</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                            <label class="form-check-label" for="inlineRadio3">Correspondence/Distance Learning</label>
+                          </div>
+                     </div>
+                    
+                    
+                    
+                   
+                 </form>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- about job -->
+
+    <!-- address -->
+    <!-- <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-9">
+              <div class="header bg-primary heamspac">
+                  <div class="row">
+                      <div class="col-md-6">
+                        <h5 class="texth">Key Skills</h5>
+                      </div>
+                      <div class="col-md-6">
+                        
+                      </div>
+                  </div>
+               
+               
+              </div>
+              <div class="card">
+                <div class="card-body">
+                    
+                 <form>
+                    
+                    
+                   
+                     <div class="form-group">
+                        <div class="row" style="width:100%; margin-top: 25px;" *ngFor="let keys of keySkills;let i=index">
+                            <div class="col-md-3">
+                                <label for="formGroupExampleInput">Skills</label>
+                                <input type="text" class="form-control" name="name{{i}}" [(ngModel)]="keys.skills" placeholder="Programming">
+                            </div>
+                            <div class="col-md-3">
+                                <label for="formGroupExampleInput">Select Skills</label>
+                                <select class="form-control" name="selectskills{{i}}" [(ngModel)]="keys.SelectSkills" id="exampleFormControlSelect1">
+                                    <option *ngFor="let skil of skills" [ngValue]="skil">{{skil.name}}</option> 
+                                    
+
+                                 </select>
+                            </div>
+                            <div class="col-md-2">
+                                <label for="formGroupExampleInput">Action</label>
+                                <button type="button" (click)="addfrm()" class="btn btn-danger"><i class="fa fa-plus fon" aria-hidden="true"></i></button>
+                            </div>
+                            <div class="col-md-2" *ngIf="i>=1">
+                                <label for="formGroupExampleInput">Action</label>
+                                <button type="button" (click)="getskilremoved(i)" class="btn btn-warning"><i class="fa fa-trash fon" aria-hidden="true"></i></button>
+                            </div>
+                          </div>
+                      
+                     </div>
+                   
+                   
+                   
+                 </form>
+            
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-9">
+              <div class="header bg-primary heamspac">
+               <h5 class="texth">IT Skills</h5>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                 <form>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">IT Skills</label>
+                        <input type="text" class="form-control" placeholder="Angular">
+                     </div>
+                    
+                   
+                     <div class="form-group">
+                        <div class="row">
+                            <div class="col">
+                                <label for="formGroupExampleInput">Version</label>
+                                <input type="text" class="form-control" placeholder="Programming">
+                            </div>
+                            <div class="col">
+                                <label for="formGroupExampleInput">Last Used</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    
+                                    <option>2000</option>
+                                    <option>2001</option>
+                                    <option>2002</option>
+                                   
+
+                                 </select>
+                            </div>
+                          </div>
+                      
+                     </div>
+                     <div class="form-group">
+                        <div class="row">
+                            <div class="col">
+                                <label for="formGroupExampleInput">Experience</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    
+                                    <option>0 Years</option>
+                                    <option>1 Years</option>
+                                    <option>2 Years</option>
+                                   
+
+                                 </select>
+                            </div>
+                            <div class="col">
+                                <label for="formGroupExampleInput">Experience</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    
+                                    <option>1 Month</option>
+                                    <option>2 month</option>
+                                    <option>3 Month</option>
+                                   
+
+                                 </select>
+                            </div>
+                          </div>
+                      
+                     </div>
+                   
+                   
+                   
+                 </form>
+            
+                </div>
+              </div>
+            </div>
+        </div>
+    </div> -->
+   
+ 
+    <!-- address -->
+   
+<!-- </article> -->
+

@@ -1,0 +1,45 @@
+.banner{
+    /* height:700px; */
+    background-color:#2f2ea6;
+}
+.row{
+    padding-top: 50px;
+}
+.fonhe{
+    font-size:xx-large;
+    font-weight: bolder;
+}
+.fonte{
+    color:#9099a4;
+    font-size:x-large;
+}
+.jobcategories{
+   
+}
+.fon{
+   margin-top:25px;
+   font-size:x-large;
+   color:#9099a4;
+}
+.categorieshead{
+    text-align: center;
+   
+}
+.categorieshead h1{
+    font-size: xx-large;
+    font-weight: bolder;
+}
+.jobfon{
+    font-weight: bolder;
+}
+.jobfonsize{
+    font-weight: bolder;
+    font-size: larger;
+}
+.material-icons{
+    font-size:larger;
+}
+.swiper-slide {
+    background: lightblue;
+  }
+  

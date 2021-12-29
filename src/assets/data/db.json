@@ -1,0 +1,32 @@
+{
+    "posts": [
+      { "companyName": "cts", "joblocation": "delhi", "is_active":true },
+      { "companyName": "cts", "joblocation": "delhi", "is_active":true },
+      { "companyName": "cts", "joblocation": "delhi", "is_active":true },
+      { "companyName": "cts", "joblocation": "delhi", "is_active":true },
+      { "companyName": "cts", "joblocation": "delhi", "is_active": false },
+      { "companyName": "wipro", "joblocation": "delhi", "is_active": false },
+      { "companyName": "wipro", "joblocation": "delhi", "is_active": false },
+      { "companyName": "wipro", "joblocation": "delhi", "is_active": false },
+      { "companyName": "wipro", "joblocation": "delhi", "is_active": false },
+      { "companyName": "wipro", "joblocation": "delhi", "is_active": false },
+      { "companyName": "wipro", "joblocation": "delhi", "is_active": false },
+      { "companyName": "wipro", "joblocation": "delhi", "is_active": false }
+    ],
+    "jobs": [
+      { "companyName": "cts", "joblocation": "delhi", "salary":"12k-15k","jobdes":"Trainee web designer","img":"/assets/images/lt2.png"},
+      { "companyName": "wipro", "joblocation": "bangalore", "salary":"13k-19k","jobdes":"web designer","img":"/assets/images/lt2.png"},
+      { "companyName": "infosys", "joblocation": "cohin", "salary":"12k-15k","jobdes":"web designer","img":"/assets/images/lt5.png" },
+      { "companyName": "cts", "joblocation": "mumbai", "salary":"12k-15k","jobdes":"Trainee  tester","img":"/assets/images/lt5.png" },
+      { "companyName": "cts", "joblocation": "delhi", "salary": "25k-50k" ,"jobdes":"Trainee  tester","img":"/assets/images/lt5.png"},
+      { "companyName": "zoho", "joblocation": "delhi", "salary": "50k-55k" ,"jobdes":"Trainee  tester","img":"/assets/images/lt2.png"},
+      { "companyName": "wipro", "joblocation": "mumbai", "salary": "25k-50k","jobdes":"Trainee  tester" ,"img":"/assets/images/lt2.png"},
+      { "companyName": "wipro", "joblocation": "delhi", "salary": "25k-50k","jobdes":"Trainee  tester","img":"/assets/images/lt2.png" },
+      { "companyName": "zoho", "joblocation": "delhi", "salary": "50k-55","jobdes":"Trainee web designer","img":"/assets/images/lt2.png" },
+      { "companyName": "wipro", "joblocation": "mumbai", "salary": "50k-55k","jobdes":"Trainee web designer","img":"/assets/images/lt2.png" },
+      { "companyName": "zoho", "joblocation": "delhi", "salary": "25k-50k","jobdes":"Trainee web designer","img":"/assets/images/lt2.png"},
+      { "companyName": "wipro", "joblocation": "bangalore", "salary": "50k-55k","jobdes":"Trainee web designer" ,"img":"/assets/images/lt2.png"}
+    ]
+    
+    
+  }

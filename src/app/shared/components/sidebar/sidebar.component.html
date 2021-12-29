@@ -1,0 +1,217 @@
+
+<mat-sidenav-container autosize>
+ 
+    <mat-sidenav #sidenav mode="side" opened="true">
+     <mat-nav-list>
+         <mat-list-item>
+            <mat-icon mat-list-icon class="chevron-button sidenav-button" (click)="isExpan=!isExpan" [ngClass]="{'rotated':'isExpan'}">
+             chevron_right
+            </mat-icon>
+         </mat-list-item>
+         <mat-list-item >
+            <mat-icon mat-list-icon>
+             home
+            </mat-icon>
+            
+            <span *ngIf="isExpan" >Dashboard</span>
+            <mat-icon *ngIf="isExpan"  mat-icon  [matMenuTriggerFor]="dropDown">
+                expand_more
+            </mat-icon >
+            
+            <mat-menu #dropDown="matMenu" overlapTrigger="false">
+              <div *ngIf="userrole==='1'">
+                <button  mat-menu-item>
+                  <mat-icon>voicemail</mat-icon>
+                  <span [routerLink]="'CandidateDash'">DashBoard</span>
+                </button>
+              </div>
+               <div *ngIf="userrole==='2'">
+                <button mat-menu-item>
+                  <mat-icon>dialpad</mat-icon>
+                  <span [routerLink]="'EmployeeDash'">Employeer DashBoard</span>
+                </button>
+               </div>
+               <div *ngIf="userrole==='3'">
+                <button mat-menu-item>
+                  <mat-icon>dialpad</mat-icon>
+                  <span [routerLink]="'jobpost'">Jobseeker DashBoard</span>
+                </button>
+               </div>
+                
+               
+              </mat-menu>
+         </mat-list-item>
+         <mat-list-item [routerLink]="'info'">
+            <mat-icon mat-list-icon>
+             important_devices
+            </mat-icon>
+            <span *ngIf="isExpan">Info</span>
+         </mat-list-item>
+         <div *ngIf="userrole==='1'">
+         <mat-list-item >
+            <mat-icon mat-list-icon>
+             supervisor_account
+            </mat-icon>
+            <span *ngIf="isExpan">users</span>
+            <mat-icon *ngIf="isExpan"  mat-icon  [matMenuTriggerFor]="userlog">
+              expand_more
+          </mat-icon >
+          <mat-menu #userlog="matMenu" overlapTrigger="false">
+            <button mat-menu-item>
+                <mat-icon>voicemail</mat-icon>
+                <span [routerLink]="'userslog'">Userslog</span>
+              </button>
+              <button mat-menu-item>
+                <mat-icon>voicemail</mat-icon>
+                <span [routerLink]="'jsker'">Jobseeker</span>
+              </button>
+              <button mat-menu-item>
+                <mat-icon>voicemail</mat-icon>
+                <span [routerLink]="'emp'">Employeers</span>
+              </button>
+           
+          </mat-menu>
+         </mat-list-item>
+        </div>
+
+        <!-- company -->
+        <mat-list-item >
+          <mat-icon mat-list-icon>
+           supervisor_account
+          </mat-icon>
+          <span *ngIf="isExpan">Company</span>
+          <mat-icon *ngIf="isExpan"  mat-icon  [matMenuTriggerFor]="company">
+            expand_more
+        </mat-icon >
+        <mat-menu #company="matMenu" overlapTrigger="false">
+          <div *ngIf="userrole==='1'">
+          <button mat-menu-item>
+              <mat-icon>voicemail</mat-icon>
+              <span [routerLink]="'bst'">Business stream</span>
+            </button>
+            </div>
+            <div *ngIf="userrole!='2'">
+            <button mat-menu-item>
+              <mat-icon>voicemail</mat-icon>
+              <span [routerLink]="'jsker'">Jobseeker</span>
+            </button>
+            </div>
+            <div *ngIf="userrole!='2'">
+            <button mat-menu-item>
+              <mat-icon>voicemail</mat-icon>
+              <span [routerLink]="'emp'">Employeers</span>
+            </button>
+            </div>
+            <div *ngIf="userrole==='2'">
+            <button mat-menu-item>
+              <mat-icon>voicemail</mat-icon>
+             
+                <span [routerLink]="'company'">company details</span>
+             
+            
+            </button>
+          </div>
+          <div *ngIf="userrole==='3'">
+            <button mat-menu-item>
+              <mat-icon>voicemail</mat-icon>
+             
+                <span [routerLink]="'comapnylist'">company List</span>
+             
+            
+            </button>
+          </div>
+         
+        </mat-menu>
+       </mat-list-item>
+        <!-- company -->
+
+
+         <mat-list-item >
+          <mat-icon mat-list-icon>
+           supervisor_account
+          </mat-icon>
+          <span *ngIf="isExpan" >Jobs</span>
+          <mat-icon *ngIf="isExpan"  mat-icon  [matMenuTriggerFor]="jobs">
+            expand_more
+        </mat-icon >
+        <mat-menu #jobs="matMenu" overlapTrigger="false">
+          <button mat-menu-item>
+              <mat-icon>voicemail</mat-icon>
+              <span [routerLink]="'postjob'">PostJobs</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>voicemail</mat-icon>
+              <span [routerLink]="'jobslist'">Jobs List</span>
+            </button>
+            <!-- <button mat-menu-item>
+              <mat-icon>voicemail</mat-icon>
+              <span [routerLink]="'jobdesc'" *ngIf="userrole!='2'">Jobs Description</span>
+            </button> -->
+            <div *ngIf="userrole!='2'">
+            <button mat-menu-item>
+              <mat-icon>voicemail</mat-icon>
+              <span [routerLink]="'searchforjobs'">searchforjobs</span>
+            </button>
+            </div>
+            <!-- <div *ngIf="userrole==='2'">
+              <button mat-menu-item>
+                <mat-icon>voicemail</mat-icon>
+                <span [routerLink]="'jobpost'">jobpost</span>
+              </button>
+              </div> -->
+            <div *ngIf="userrole==='2'">
+            <!-- <button mat-menu-item>
+              <mat-icon>voicemail</mat-icon>
+              <span [routerLink]="'jobcategory'">jobcategory</span>
+            </button> -->
+            </div>
+            <div *ngIf="userrole==='2'||userrole==='3'">
+              <button mat-menu-item>
+                <mat-icon>voicemail</mat-icon>
+                <span [routerLink]="'appliedjob'">Applied Jobs</span>
+              </button>
+              </div>
+              <div *ngIf="userrole==='1'">
+                <button mat-menu-item>
+                  <mat-icon>voicemail</mat-icon>
+                  <span [routerLink]="'jobstatus'">job status</span>
+                </button>
+                </div>
+            <div *ngIf="userrole!='2'">
+              <button mat-menu-item>
+                <mat-icon>voicemail</mat-icon>
+                <span [routerLink]="'jobtype'">jobType</span>
+              </button>
+            </div>
+            <div *ngIf="userrole==='3'">
+              <button mat-menu-item>
+                <mat-icon>voicemail</mat-icon>
+                <span [routerLink]="'SavedJobs'">SavedJobs</span>
+              </button>
+            </div>
+            <div *ngIf="userrole==='3'">
+              <button mat-menu-item>
+                <mat-icon>voicemail</mat-icon>
+                <span [routerLink]="'addmesg'">Add Message</span>
+              </button>
+            </div>
+            <div *ngIf="userrole==='3'|| userrole==='2'">
+              <button mat-menu-item>
+                <mat-icon>voicemail</mat-icon>
+                <span [routerLink]="'mesglist'">Message List</span>
+              </button>
+            </div>
+            
+           
+          
+          
+         
+        </mat-menu>
+      
+       </mat-list-item>
+     </mat-nav-list>
+    </mat-sidenav>
+   
+</mat-sidenav-container>
+
+
